@@ -26,8 +26,16 @@
         <property name="sessionCacheSize" value="3"/>
     </bean>
 
+    <!--
+        配置监听器：acknowledge:配置消息的确认机制
+                 container-type：配置容器的类型，默认是Defaulter-type，SingleContainer.
+                 destination-type:配置目的地类型，有queue和topic两种
+                 connection-factory：指定ConnectionFactory
+
+    -->
     <jms:listener-container acknowledge="auto" container-type="default" destination-type="queue"
                             connection-factory="connectionFactory">
+        <!--监听器监听目的和监听器-->
         <jms:listener destination="spring-test" ref="mailMessageListener"/>
     </jms:listener-container>
 </beans>

@@ -113,7 +113,7 @@
             <artifactId>spring-jms</artifactId>
             <version>${spring.version}</version>
         </dependency>
-        <!--添加spring对JMS支持的jar包-->
+        <!--添加java对发送mail的jar包-->
         <dependency>
             <groupId>javax.mail</groupId>
             <artifactId>javax.mail-api</artifactId>
